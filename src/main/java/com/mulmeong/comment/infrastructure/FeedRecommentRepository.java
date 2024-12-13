@@ -8,4 +8,6 @@ import java.util.Optional;
 public interface FeedRecommentRepository extends JpaRepository<FeedRecomment, Long> {
 
     Optional<FeedRecomment> findByRecommentUuid(String recommentUuid);
+
+    boolean existsByRecommentUuid(String recommentUuid);
 }

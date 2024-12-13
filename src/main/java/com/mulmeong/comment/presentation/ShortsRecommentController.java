@@ -19,4 +19,10 @@ public class ShortsRecommentController {
         return new BaseResponse<>(shortsRecommentService.getShortsRecomment(recommentUuid).toVo());
     }
 
+    @GetMapping("/comments/recomments/exist/{recommentUuid}")
+    @Operation(tags = {"Feign Service"})
+    public boolean existByShortsRecommentUuid(@PathVariable String recommentUuid) {
+        return shortsRecommentService.existByRecommentUuid(recommentUuid);
+    }
+
 }

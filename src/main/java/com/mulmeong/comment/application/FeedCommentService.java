@@ -13,4 +13,5 @@ public interface FeedCommentService {
 
     FeedCommentResponseDto getFeedComment(String commentUuid);
 
+    boolean existByCommentUuid(String commentUuid);
 }

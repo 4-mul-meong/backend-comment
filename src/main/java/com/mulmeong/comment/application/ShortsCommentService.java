@@ -13,4 +13,6 @@ public interface ShortsCommentService {
 
     ShortsCommentResponseDto getShortsComment(String commentUuid);
 
+    boolean existByCommentUuid(String commentUuid);
+
 }

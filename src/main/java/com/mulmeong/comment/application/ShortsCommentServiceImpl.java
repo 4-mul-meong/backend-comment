@@ -68,4 +68,9 @@ public class ShortsCommentServiceImpl implements ShortsCommentService {
         return ShortsCommentResponseDto.toDto(shortsComment);
     }
 
+    @Override
+    public boolean existByCommentUuid(String commentUuid) {
+        return shortsCommentRepository.existsByCommentUuid(commentUuid);
+    }
+
 }

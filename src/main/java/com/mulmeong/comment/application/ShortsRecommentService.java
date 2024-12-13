@@ -13,4 +13,5 @@ public interface ShortsRecommentService {
 
     ShortsRecommentResponseDto getShortsRecomment(String recommentUuid);
 
+    boolean existByRecommentUuid(String recommentUuid);
 }

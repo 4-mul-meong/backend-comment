@@ -72,4 +72,9 @@ public class FeedRecommentServiceImpl implements FeedRecommentService {
         return FeedRecommentResponseDto.toDto(feedRecomment);
     }
 
+    @Override
+    public boolean existByRecommentUuid(String recommentUuid) {
+        return feedRecommentRepository.existsByRecommentUuid(recommentUuid);
+    }
+
 }

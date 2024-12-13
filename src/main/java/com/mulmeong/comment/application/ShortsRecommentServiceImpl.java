@@ -70,4 +70,9 @@ public class ShortsRecommentServiceImpl implements ShortsRecommentService {
         return ShortsRecommentResponseDto.toDto(shortsRecomment);
     }
 
+    @Override
+    public boolean existByRecommentUuid(String recommentUuid) {
+        return shortsRecommentRepository.existsByRecommentUuid(recommentUuid);
+    }
+
 }

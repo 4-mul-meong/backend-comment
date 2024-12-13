@@ -26,4 +26,10 @@ public class FeedRecommentController {
         return new BaseResponse<>(feedRecommentService.getFeedRecomment(recommentUuid).toVo());
     }
 
+    @GetMapping("/comments/recommets/exist/{recommentUuid}")
+    @Operation(tags = {"Feign Service"})
+    public boolean existByFeedRecommentUuid(@PathVariable String recommentUuid) {
+        return feedRecommentService.existByRecommentUuid(recommentUuid);
+    }
+
 }

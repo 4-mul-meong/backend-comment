@@ -66,4 +66,9 @@ public class FeedCommentServiceImpl implements FeedCommentService {
         return FeedCommentResponseDto.toDto(feedComment);
     }
 
+    @Override
+    public boolean existByCommentUuid(String commentUuid) {
+        return feedCommentRepository.existsByCommentUuid(commentUuid);
+    }
+
 }

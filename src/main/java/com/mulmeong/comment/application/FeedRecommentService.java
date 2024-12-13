@@ -13,4 +13,6 @@ public interface FeedRecommentService {
 
     FeedRecommentResponseDto getFeedRecomment(String recommentUuid);
 
+    boolean existByRecommentUuid(String recommentUuid);
+
 }

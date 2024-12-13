@@ -21,4 +21,10 @@ public class ShortsCommentController {
         return new BaseResponse<>(shortsCommentService.getShortsComment(commentUuid).toVo());
     }
 
+    @GetMapping("/comments/exist/{commentUuid}")
+    @Operation(tags = {"Feign Service"})
+    public boolean existByShortsCommentUuid(@PathVariable String commentUuid) {
+        return shortsCommentService.existByCommentUuid(commentUuid);
+    }
+
 }

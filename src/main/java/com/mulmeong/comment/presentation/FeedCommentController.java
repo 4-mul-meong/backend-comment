@@ -33,4 +33,9 @@ public class FeedCommentController {
         return new BaseResponse<>(feedCommentService.getFeedComment(commentUuid).toVo());
     }
 
+    @GetMapping("/comments/exist/{commentUuid}")
+    @Operation(tags = {"Feign Service"})
+    public boolean existByFeedCommentUuid(@PathVariable String commentUuid) {
+        return feedCommentService.existByCommentUuid(commentUuid);
+    }
 }
