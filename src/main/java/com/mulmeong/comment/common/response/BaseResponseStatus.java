@@ -35,7 +35,7 @@ public enum BaseResponseStatus {
     NO_UPDATE_COMMENT_AUTHORITY(HttpStatus.BAD_REQUEST, false, 4005, "댓글 수정 권한이 없습니다"),
     NO_UPDATE_RECOMMENT_AUTHORITY(HttpStatus.BAD_REQUEST, false, 4006, "대댓글 수정 권한이 없습니다");
 
-    private final HttpStatusCode httpStatusCode;
+    private final HttpStatus httpStatusCode;
     private final boolean isSuccess;
     private final int code;
     private final String message;
